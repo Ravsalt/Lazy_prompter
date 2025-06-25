@@ -53,7 +53,6 @@ const PromptGenerator = () => {
     setGeneratedPrompt(null);
 
     let system_prompt = isAdvanced ? advancedSystemPrompt : systemPrompt;
-    console.log(system_prompt);
     try {
       const response = await fetch('https://text.pollinations.ai/openai', {
         method: 'POST',
