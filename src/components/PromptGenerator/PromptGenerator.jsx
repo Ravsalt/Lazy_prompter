@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { Zap, Wand2, Loader2, Sparkles, Copy, Check, Info, AlertTriangle } from 'lucide-react';
-import systemPrompt from '../../prompts/systemPrompt';
-import advancedSystemPrompt from '../../prompts/advancePrompt';
+
+// Get prompts from environment variables
+const systemPrompt = JSON.parse(import.meta.env.PROMPTS.PROMPT_SYSTEMPROMPT || '{}');
+const advancedSystemPrompt = JSON.parse(import.meta.env.PROMPTS.PROMPT_ADVANCEPROMPT || '{}');
 
 const PromptGenerator = () => {
   const [prompt, setPrompt] = useState('');
@@ -114,7 +116,7 @@ const PromptGenerator = () => {
             <textarea
               id="prompt-input"
               ref={textareaRef}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-100 transition duration-200 min-h-[120px] max-h-[300px] resize-none shadow-sm"
+              className="w-full p-4 bg-white border border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-100 transition duration-200 min-h-[120px] max-h-[300px] resize-none shadow-sm"
               placeholder="Describe your task here..."
               value={prompt}
               onChange={handlePromptChange}
