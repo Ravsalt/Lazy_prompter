@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { Star } from 'lucide-react';
 
+
 const Layout = ({ 
   children, 
   title = 'Lazy Prompter',
