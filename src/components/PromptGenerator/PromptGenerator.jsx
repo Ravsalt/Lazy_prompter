@@ -116,7 +116,7 @@ const PromptGenerator = () => {
             <textarea
               id="prompt-input"
               ref={textareaRef}
-              className="w-full p-4 bg-white border border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-100 transition duration-200 min-h-[120px] max-h-[300px] resize-none shadow-sm"
+              className="w-full p-4 bg-white border border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-100 transition duration-200 min-h-[120px] max-h-[300px] resize-none shadow-sm text-gray-900"
               placeholder="Describe your task here..."
               value={prompt}
               onChange={handlePromptChange}
